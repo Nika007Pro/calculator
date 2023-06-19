@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="570.0" prefWidth="440.0" style="-fx-background-color: khaki;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.calc.HelloController">
+    <children>
+        <Label fx:id="sost" text="Ваша подписка:" textFill="#6e7b09ab">
+            <font>
+                <Font size="14.0" />
+            </font>
+            <VBox.margin>
+                <Insets left="25.0" top="10.0" />
+            </VBox.margin>
+        </Label>
+        <ComboBox fx:id="subs" onAction="#ChangeSub" prefWidth="150.0" style="-fx-background-color: olive;">
+            <VBox.margin>
+                <Insets left="20.0" top="10.0" />
+            </VBox.margin>
+        </ComboBox>
+        <Label fx:id="kolvo">
+            <font>
+                <Font size="14.0" />
+            </font>
+            <VBox.margin>
+                <Insets left="25.0" top="10.0" />
+            </VBox.margin>
+        </Label>
+        <TextField fx:id="txt_result" disable="true" prefHeight="71.0" prefWidth="400.0">
+            <VBox.margin>
+                <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+            </VBox.margin>
+            <font>
+                <Font size="25.0" />
+            </font>
+        </TextField>
+        <HBox prefHeight="45.0" prefWidth="300.0">
+            <children>
+                <Button fx:id="b7" mnemonicParsing="false" onAction="#ComputeProcess" prefHeight="70.0" prefWidth="64.0" style="-fx-background-color: olive;" text="7" textFill="#f6ff00">
+                    <HBox.margin>
+                        <Insets bottom="12.0" left="10.0" right="14.0" top="14.0" />
+                    </HBox.margin>
+                    <font>
+                        <Font name="System Bold" size="22.0" />
+                    </font></Button>
+                <Button fx:id="b8" mnemonicParsing="false" onAction="#ComputeProcess" prefHeight="70.0" prefWidth="64.0" style="-fx-background-color: olive;" text="8" textFill="#f6ff00">
+                    <HBox.margin>
+                        <Insets bottom="12.0" left="10.0" right="14.0" top="14.0" />
+                    </HBox.margin>
+                    <font>
+                        <Font name="System Bold" size="22.0" />
+                    </font></Button>
+                <Button fx:id="b9" mnemonicParsing="false" onAction="#ComputeProcess" prefHeight="70.0" prefWidth="64.0" style="-fx-background-color: olive;" text="9" textFill="#f6ff00">
+                    <HBox.margin>
+                        <Insets bottom="12.0" left="10.0" right="14.0" top="14.0" />
+                    </HBox.margin>
+                    <font>
+                        <Font name="System Bold" size="22.0" />
+                    </font></Button>
+                <Button fx:id="divide" mnemonicParsing="false" onAction="#operatorProcess" prefHeight="70.0" prefWidth="64.0" style="-fx-background-color: olive;" text="/" textFill="#f6ff00">
+                    <HBox.margin>
+                        <Insets bottom="12.0" left="10.0" right="14.0" top="14.0" />
+                    </HBox.margin>
+                    <font>
+                        <Font name="System Bold" size="22.0" />
+                    </font></Button>
+                <Button fx:id="percent" layoutX="263.0" layoutY="20.0" mnemonicParsing="false" onAction="#operatorProcess" prefHeight="70.0" prefWidth="64.0" style="-fx-background-color: olive;" text="\%" textFill="#f6ff00">
+                    <font>
+                        <Font name="System Bold" size="22.0" />
+                    </font>
+                    <HBox.margin>
+                        <Insets bottom="12.0" left="10.0" right="14.0" top="14.0" />
+                    </HBox.margin>
+                </Button>
+            </children>
+        </HBox>
+        <HBox prefHeight="45.0" prefWidth="300.0">
+            <children>
+                <Button fx:id="b4" mnemonicParsing="false" onAction="#ComputeProcess" prefHeight="70.0" prefWidth="64.0" style="-fx-background-color: olive;" text="4" textFill="#f6ff00">
+                    <HBox.margin>
+                        <Insets bottom="12.0" left="10.0" right="14.0" top="14.0" />
+                    </HBox.margin>
+                    <font>
+                        <Font name="System Bold" size="22.0" />
+                    </font>
+                </Button>
+                <Button fx:id="b5" mnemonicParsing="false" onAction="#ComputeProcess" prefHeight="70.0" prefWidth="64.0" style="-fx-background-color: olive;" text="5" textFill="#f6ff00">
+                    <HBox.margin>
+                        <Insets bottom="12.0" left="10.0" right="14.0" top="14.0" />
+                    </HBox.margin>
+                    <font>
+                        <Font name="System Bold" size="22.0" />
+                    </font>
+                </Button>
+                <Button fx:id="b6" mnemonicParsing="false" onAction="#ComputeProcess" prefHeight="70.0" prefWidth="64.0" style="-fx-background-color: olive;" text="6" textFill="#f6ff00">
+                    <HBox.margin>
+                        <Insets bottom="12.0" left="10.0" right="14.0" top="14.0" />
+                    </HBox.margin>
+                    <font>
+                        <Font name="System Bold" size="22.0" />
+                    </font>
+                </Button>
+                <Button fx:id="minus" mnemonicParsing="false" onAction="#operatorProcess" prefHeight="70.0" prefWidth="64.0" style="-fx-background-color: olive;" text="-" textFill="#f6ff00">
+                    <HBox.margin>
+                        <Insets bottom="12.0" left="10.0" right="14.0" top="14.0" />
+                    </HBox.margin>
+                    <font>
+                        <Font name="System Bold" size="22.0" />
+                    </font>
+                </Button>
+                <Button fx:id="radical" layoutX="263.0" layoutY="20.0" mnemonicParsing="false" onAction="#Radical" prefHeight="70.0" prefWidth="64.0" style="-fx-background-color: olive;" text="√" textFill="#f6ff00">
+                    <font>
+                        <Font name="System Bold" size="22.0" />
+                    </font>
+                    <HBox.margin>
+                        <Insets bottom="12.0" left="10.0" right="14.0" top="14.0" />
+                    </HBox.margin>
+                </Button>
+            </children>
+        </HBox>
+        <HBox prefHeight="47.0" prefWidth="300.0">
+            <children>
+                <Button fx:id="b1" mnemonicParsing="false" onAction="#ComputeProcess" prefHeight="70.0" prefWidth="64.0" style="-fx-background-color: olive;" text="1" textFill="#f6ff00">
+                    <HBox.margin>
+                        <Insets bottom="12.0" left="10.0" right="14.0" top="14.0" />
+                    </HBox.margin>
+                    <font>
+                        <Font name="System Bold" size="22.0" />
+                    </font>
+                </Button>
+                <Button fx:id="b2" mnemonicParsing="false" onAction="#ComputeProcess" prefHeight="70.0" prefWidth="64.0" style="-fx-background-color: olive;" text="2" textFill="#f6ff00">
+                    <HBox.margin>
+                        <Insets bottom="12.0" left="10.0" right="14.0" top="14.0" />
+                    </HBox.margin>
+                    <font>
+                        <Font name="System Bold" size="22.0" />
+                    </font>
+                </Button>
+                <Button fx:id="b3" mnemonicParsing="false" onAction="#ComputeProcess" prefHeight="70.0" prefWidth="64.0" style="-fx-background-color: olive;" text="3" textFill="#f6ff00">
+                    <HBox.margin>
+                        <Insets bottom="12.0" left="10.0" right="14.0" top="14.0" />
+                    </HBox.margin>
+                    <font>
+                        <Font name="System Bold" size="22.0" />
+                    </font>
+                </Button>
+                <Button fx:id="multiply" mnemonicParsing="false" onAction="#operatorProcess" prefHeight="70.0" prefWidth="64.0" style="-fx-background-color: olive;" text="*" textFill="#f6ff00">
+                    <HBox.margin>
+                        <Insets bottom="12.0" left="10.0" right="14.0" top="14.0" />
+                    </HBox.margin>
+                    <font>
+                        <Font name="System Bold" size="22.0" />
+                    </font>
+                </Button>
+                <Button fx:id="exponent" layoutX="263.0" layoutY="20.0" mnemonicParsing="false" onAction="#operatorProcess" prefHeight="70.0" prefWidth="64.0" style="-fx-background-color: olive;" text="^" textFill="#f6ff00">
+                    <font>
+                        <Font name="System Bold" size="22.0" />
+                    </font>
+                    <HBox.margin>
+                        <Insets bottom="12.0" left="10.0" right="14.0" top="14.0" />
+                    </HBox.margin>
+                </Button>
+            </children>
+        </HBox>
+        <HBox prefHeight="38.0" prefWidth="300.0">
+            <children>
+                <Button fx:id="b0" mnemonicParsing="false" onAction="#ComputeProcess" prefHeight="70.0" prefWidth="64.0" style="-fx-background-color: olive;" text="0" textFill="#f6ff00">
+                    <HBox.margin>
+                        <Insets bottom="12.0" left="10.0" right="14.0" top="14.0" />
+                    </HBox.margin>
+                    <font>
+                        <Font name="System Bold" size="22.0" />
+                    </font>
+                </Button>
+                <Button fx:id="point" mnemonicParsing="false" onAction="#Point" prefHeight="70.0" prefWidth="64.0" style="-fx-background-color: olive;" text="." textFill="#f6ff00">
+                    <HBox.margin>
+                        <Insets bottom="12.0" left="10.0" right="14.0" top="14.0" />
+                    </HBox.margin>
+                    <font>
+                        <Font name="System Bold" size="22.0" />
+                    </font>
+                </Button>
+                <Button fx:id="CS" mnemonicParsing="false" onAction="#ComputeProcess2" prefHeight="70.0" prefWidth="64.0" style="-fx-background-color: olive;" text="+/-" textFill="#f6ff00">
+                    <HBox.margin>
+                        <Insets bottom="12.0" left="10.0" right="14.0" top="14.0" />
+                    </HBox.margin>
+                    <font>
+                        <Font name="System Bold" size="20.0" />
+                    </font>
+                </Button>
+                <Button fx:id="plus" mnemonicParsing="false" onAction="#operatorProcess" prefHeight="70.0" prefWidth="64.0" style="-fx-background-color: olive;" text="+" textFill="#f6ff00">
+                    <HBox.margin>
+                        <Insets bottom="12.0" left="10.0" right="14.0" top="14.0" />
+                    </HBox.margin>
+                    <font>
+                        <Font name="System Bold" size="22.0" />
+                    </font>
+                </Button>
+                <Button fx:id="mod" layoutX="263.0" layoutY="20.0" mnemonicParsing="false" onAction="#operatorProcess" prefHeight="70.0" prefWidth="64.0" style="-fx-background-color: olive;" text="mod" textFill="#f6ff00">
+                    <font>
+                        <Font name="System Bold" size="17.0" />
+                    </font>
+                    <HBox.margin>
+                        <Insets bottom="12.0" left="10.0" right="14.0" top="14.0" />
+                    </HBox.margin>
+                </Button>
+            </children>
+        </HBox>
+        <HBox prefHeight="71.0" prefWidth="429.0">
+            <children>
+                <Button fx:id="delete" mnemonicParsing="false" onAction="#delete" prefHeight="70.0" prefWidth="64.0" style="-fx-background-color: yellow;" text="Delete">
+                    <HBox.margin>
+                        <Insets bottom="12.0" left="10.0" right="14.0" top="14.0" />
+                    </HBox.margin>
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Button>
+                <Button fx:id="clear" mnemonicParsing="false" onAction="#clear" prefHeight="70.0" prefWidth="64.0" style="-fx-background-color: yellow;" text="Clear">
+                    <HBox.margin>
+                        <Insets bottom="12.0" left="10.0" right="14.0" top="14.0" />
+                    </HBox.margin>
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Button>
+                <Button fx:id="equal" mnemonicParsing="false" onAction="#operatorProcess" prefHeight="70.0" prefWidth="64.0" style="-fx-background-color: yellow;" text="=">
+                    <HBox.margin>
+                        <Insets bottom="12.0" left="10.0" right="14.0" top="14.0" />
+                    </HBox.margin>
+                    <font>
+                        <Font name="System Bold" size="22.0" />
+                    </font>
+                </Button>
+            </children>
+        </HBox>
+    </children>
+</VBox>
